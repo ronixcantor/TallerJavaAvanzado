@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de atletas</title>
+    <style>
+       body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+#athletes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.athlete-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 230px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.athlete-card:hover {
+    transform: translateY(-5px);
+}
+
+.athlete-card h3 {
+    margin-top: 0;
+    color: #222;
+}
+
+.athlete-card p {
+    margin: 6px 0;
+    color: #555;
+}
+
+button {
+    margin-top: 12px;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #43a047;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.active {
+    border: 2px solid #4CAF50;
+}
+    </style>
+</head>
+
+<body>
+<!--  <div>
+        <h1>Formulario de Inscripción</h1>
+        <label for="inputEmail">Email:</label>
+        <input type="text" id="inputEmail">
+        <button id="btnEmail">Send</button>
+    </div>
+-->
+    <h1>Listado de atletas</h1>
+    <div id="athletes-container"></div>
+    <ul id="list">
+    </ul>
+
+    <script src="taller.js"></script>
+
+</body>
+
+</html>
